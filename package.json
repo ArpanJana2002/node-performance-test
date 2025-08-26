@@ -1,0 +1,14 @@
+{
+  "name": "node-starter",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "perf:basic": "autocannon -c 10 -d 30 http://localhost:3000",
+    "perf:heavy": "autocannon -c 50 -d 30 http://localhost:3000",
+    "perf:api": "autocannon -c 10 -d 30 http://localhost:3000/api/data",
+    "perf:all": "npm run perf:basic && npm run perf:api"
+  }
+}
